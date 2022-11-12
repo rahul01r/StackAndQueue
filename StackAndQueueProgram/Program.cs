@@ -6,11 +6,11 @@ namespace StackAndQueueProgram
     {
         static void Main(string[] args)
         {
-          StackAndQueue stack = new StackAndQueue();
+          StackAndQueue<int> stack = new StackAndQueue<int>();
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select Programs\n1.Create Stack");
+                Console.WriteLine("Select Programs\n1.Create Stack\n2.Pop & Peek the node using stack");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -18,6 +18,11 @@ namespace StackAndQueueProgram
                         stack.Push(70);
                         stack.Push(30);
                         stack.Push(56);
+                        stack.Display();
+                        break;
+                    case 2:
+                        stack.Pop();
+                        stack.Peek();
                         stack.Display();
                         break;
                 }
