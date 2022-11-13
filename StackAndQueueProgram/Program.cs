@@ -7,10 +7,11 @@ namespace StackAndQueueProgram
         static void Main(string[] args)
         {
           StackAndQueue<int> stack = new StackAndQueue<int>();
+          QueueProgram<int> queue = new QueueProgram<int>();
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select Programs\n1.Create Stack\n2.Pop & Peek the node using stack");
+                Console.WriteLine("Select Programs\n1.Create Stack\n2.Pop & Peek the node using stack\n3.Enqueue the element first in first out order");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -24,6 +25,12 @@ namespace StackAndQueueProgram
                         stack.Pop();
                         stack.Peek();
                         stack.Display();
+                        break;
+                    case 3:
+                        queue.Enqueue(70);
+                        queue.Enqueue(30);
+                        queue.Enqueue(56);
+                        queue.Display();
                         break;
                 }
             }
