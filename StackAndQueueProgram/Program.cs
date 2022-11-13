@@ -11,7 +11,7 @@ namespace StackAndQueueProgram
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("Select Programs\n1.Create Stack\n2.Pop & Peek the node using stack\n3.Enqueue the element first in first out order");
+                Console.WriteLine("Select Programs\n1.Create Stack\n2.Pop & Peek the node using stack\n3.Enqueue the element first in first out order\n4.Delete the Node Using Queue");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -30,6 +30,10 @@ namespace StackAndQueueProgram
                         queue.Enqueue(70);
                         queue.Enqueue(30);
                         queue.Enqueue(56);
+                        queue.Display();
+                        break;
+                    case 4:
+                        queue.Dequeue();
                         queue.Display();
                         break;
                 }
